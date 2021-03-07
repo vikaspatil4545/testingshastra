@@ -1,0 +1,10 @@
+package myproject;
+
+public class finddigitsfrmstr
+{
+	public static void main(String args[])
+	{
+		
+	}
+
+}

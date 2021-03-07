@@ -1,0 +1,53 @@
+package com.stepdefinations;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
+
+import com.fekeyword.testcases.Keywordtestcases;
+import com.filpkart.test.HomepageTest;
+import com.flipkart.pages.Homepage;
+import com.newkeyword.KeywordFE;
+import com.utility.FileUtil;
+
+import io.cucumber.java.Before;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+
+public class VerifyLogoStepdefination extends KeywordFE {
+
+	String[] parts;
+	Homepage hpp=PageFactory.initElements(driver, Homepage.class);
+	
+	@Given("User enter launch the application URL in the browser")
+	public void user_enter_launch_the_application_URL_in_the_browser() {
+	  // System.out.println("Hi");
+	   KeywordFE.openBrowser("Chrome");
+	   KeywordFE.maximizeBrowser();
+	   KeywordFE.openUrl("https://www.flipkart.com/");
+	    
+	}
+
+	@Then("User verifies the Brand Logo")
+	public void user_verifies_the_Brand_Logo() {
+	    System.out.println("hello");
+	    parts=FileUtil.getLocator("cancel");
+	    KeywordFE.clickOnElement(parts[0], parts[1]);
+	    parts=FileUtil.getLocator("imglogo");
+	    
+	    KeywordFE.isLogoVisible(parts[0],parts[1]);
+	    WebElement webelement = KeywordFE.isLogoVisible(parts[0], parts[1]);
+		if (webelement.isDisplayed()) {
+			//log.info("Brand logo is visible");
+			System.out.println("Brand logo is visible");
+		} 
+		else {
+			System.out.println("Brand logo is not visible");
+		}
+		
+	Assert.assertTrue(webelement.isDisplayed(), "Brand logo is visible");
+		
+	}
+
+}

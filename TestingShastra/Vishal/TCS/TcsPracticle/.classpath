@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-14">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/Vikas Jar/selenium-server-standalone-3.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/Vikas Jar/slf4j-api-1.7.25.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/Vikas Jar/webdrivermanager-3.6.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

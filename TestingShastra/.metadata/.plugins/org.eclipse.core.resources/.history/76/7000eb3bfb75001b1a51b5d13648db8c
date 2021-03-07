@@ -1,0 +1,5 @@
+Feature: Login feature
+
+@sanity
+Scenario: Verify Successfull login when user enters Username and password 
+Given: User enter 

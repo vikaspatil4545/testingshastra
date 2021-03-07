@@ -1,0 +1,13 @@
+package myproject;
+
+public class findandaddnofrmstr {
+
+	public static void main(String[] args) {
+	
+		String="vikas4is8good4boy3"; 
+		
+		// TODO Auto-generated method stub
+
+	}
+
+}

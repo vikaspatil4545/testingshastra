@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="ietest(failed)">
+    <parameter name="browsername" value="Internetexplorer"/>
+    <classes>
+      <class name="Testingdifferentbroswer">
+        <methods>
+          <include name="launchdifferentbrowser" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- Testingdifferentbroswer -->
+    </classes>
+  </test> <!-- ietest(failed) -->
+</suite> <!-- Failed suite [Suite] -->

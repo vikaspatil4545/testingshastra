@@ -1,0 +1,30 @@
+package com.demo.selenium;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Tcs1 {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+    WebDriver driver;
+ WebDriverManager.chromedriver().setup();
+ driver=new ChromeDriver();
+ driver.get("https://accounts.google.com/signup");
+ driver.findElement(By.xpath("//input[@name='firstName']")).sendKeys("vishal");
+ driver.findElement(By.xpath("//input[@name='Username']")).sendKeys("v04406177");
+ driver.findElement(By.xpath("//input[@name='Passwd']")).sendKeys("Vk123");
+ driver.findElement(By.xpath("//input[@name='ConfirmPasswd']")).sendKeys("Vk123");
+ driver.findElement(By.xpath("//input[@type='checkbox']")).click();
+ driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();
+ 
+ Thread.sleep(5000);
+ 
+ driver.quit();
+
+	}
+
+}
